@@ -8,10 +8,10 @@ CREATE TABLE judete(
 -- ORASE --
 CREATE TABLE orase(
     id_oras NUMBER PRIMARY KEY,
+    nume VARCHAR2(30),
     id_judet NUMBER,
     FOREIGN KEY (id_judet) REFERENCES judete(id_judet)
 );
-
 --
 
 -- LOCATII --
@@ -42,10 +42,20 @@ CREATE TABLE produse(
 );
 --
 
+-- DEPOZITE --
+CREATE TABLE depozite(
+    id_depozit NUMBER PRIMARY KEY,
+    id_locatie NUMBER NOT NULL,
+    FOREIGN KEY (id_locatie) REFERENCES locatii(id_locatie)
+);
+-- 
+
 -- INVENTARE --
 CREATE TABLE inventare(
     id_inventar NUMBER PRIMARY KEY,
-    sector_depozit VARCHAR2(5)
+    sector_depozit VARCHAR2(5) NOT NULL,
+    id_depozit NUMBER NOT NULL,
+    FOREIGN KEY (id_depozit) REFERENCES depozite(id_depozit)
 );
 --
 
@@ -59,16 +69,6 @@ CREATE TABLE asoc_produs(
     FOREIGN KEY (id_produs) REFERENCES produse(id_produs)
 );
 --
-
--- DEPOZITE --
-CREATE TABLE depozite(
-    id_depozit NUMBER PRIMARY KEY,
-    id_inventar NUMBER,
-    id_locatie NUMBER NOT NULL,
-    FOREIGN KEY (id_inventar) REFERENCES inventare(id_inventar),
-    FOREIGN KEY (id_locatie) REFERENCES locatii(id_locatie)
-);
--- 
 
 -- GENURI --
 CREATE TABLE genuri(
@@ -89,7 +89,7 @@ CREATE TABLE coperte(
 -- TIPURI_LANSARI
 CREATE TABLE tipuri_lansari(
     id_tip_lansare NUMBER PRIMARY KEY,
-    titlu VARCHAR2(5)
+    titlu VARCHAR2(10)
 );
 --
 
@@ -128,7 +128,9 @@ CREATE TABLE artisti(
     data_nastere DATE,
     telefon VARCHAR2(12),
     id_gen NUMBER NOT NULL,
-    id_manager NUMBER NOT NULL
+    id_manager NUMBER NOT NULL,
+    FOREIGN KEY (id_gen) REFERENCES genuri(id_gen),
+    FOREIGN KEY (id_manager) REFERENCES angajati(id_angajat)
 );
 --
 
@@ -145,7 +147,7 @@ CREATE TABLE asoc_lansari(
 -- MAGAZINE_ONLINE --
 CREATE TABLE magazine_online(
     id_magazin_online NUMBER PRIMARY KEY,
-    nume VARCHAR2(15) NOT NULL,
+    nume VARCHAR2(25) NOT NULL,
     id_artist NUMBER,
     FOREIGN KEY (id_artist) REFERENCES artisti(id_artist)
 );
@@ -164,14 +166,14 @@ CREATE TABLE asoc_depozite(
 -- FACILITATI --
 CREATE TABLE facilitati(
     id_facilitate NUMBER PRIMARY KEY,
-    nume_facilitate VARCHAR(10) NOT NULL
+    nume_facilitate VARCHAR(20) NOT NULL
 );
 --
 
 -- POST --
 CREATE TABLE posturi(
     id_post NUMBER PRIMARY KEY,
-    nume_post VARCHAR2(10) NOT NULL,
+    nume_post VARCHAR2(25) NOT NULL,
     salariu_minim NUMBER,
     salariu_maxim NUMBER,
     experienta_minima NUMBER
@@ -186,7 +188,7 @@ CREATE TABLE angajati(
     id_post NUMBER NOT NULL,
     id_departament NUMBER NOT NULL,
     telefon VARCHAR2(12),
-    email VARCHAR2(25) NOT NULL,
+    email VARCHAR2(35) NOT NULL,
     data_nastere DATE,
     salariu NUMBER NOT NULL,
     FOREIGN KEY (id_post) REFERENCES posturi(id_post)
@@ -196,8 +198,8 @@ CREATE TABLE angajati(
 -- SEDII --
 CREATE TABLE sedii(
     id_sediu NUMBER PRIMARY KEY,
-    nume_sediu VARCHAR(15),
-    id_director NUMBER NOT NULL,
+    nume_sediu VARCHAR(25),
+    id_director NUMBER,
     id_locatie NUMBER NOT NULL,
     FOREIGN KEY (id_director) REFERENCES angajati(id_angajat),
     FOREIGN KEY (id_locatie) REFERENCES locatii(id_locatie)
@@ -217,8 +219,8 @@ CREATE TABLE asoc_facilitati(
 -- DEPARTAMENTE --
 CREATE TABLE departamente(
     id_departament NUMBER PRIMARY KEY,
-    nume_departament VARCHAR2(10) NOT NULL,
-    id_coordonator NUMBER NOT NULL,
+    nume_departament VARCHAR2(20) NOT NULL,
+    id_coordonator NUMBER,
     id_sediu NUMBER NOT NULL,
     FOREIGN KEY (id_coordonator) REFERENCES angajati(id_angajat),
     FOREIGN KEY (id_sediu) REFERENCES sedii(id_sediu)
@@ -242,12 +244,14 @@ CREATE TABLE contracte(
 
 -- CONTRACTE_ANGAJATI --
 CREATE TABLE contracte_angajati(
-    id_contract NUMBER PRIMARY KEY,
+    id_contract NUMBER,
+    id_angajat NUMBER,
     ore_munca NUMBER NOT NULL,
     salariu_start NUMBER NOT NULL,
     ore_perioada_proba NUMBER,
     id_post NUMBER NOT NULL,
     id_departament NUMBER,
+    PRIMARY KEY (id_contract, id_angajat),
     FOREIGN KEY (id_post) REFERENCES posturi(id_post),
     FOREIGN KEY (id_departament) REFERENCES departamente(id_departament)
 );
@@ -256,7 +260,7 @@ CREATE TABLE contracte_angajati(
 -- TIPURI_CONTRACTE_ARTISTI --
 CREATE TABLE tipuri_contracte_artisti(
     id_tip_contract_artist NUMBER PRIMARY KEY,
-    titlu VARCHAR2(15) NOT NULL
+    titlu VARCHAR2(25) NOT NULL
 );
 --
 
