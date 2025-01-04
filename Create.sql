@@ -268,12 +268,13 @@ CREATE TABLE tipuri_contracte_artisti(
 
 -- CONTRACTE_ARTISTI --
 CREATE TABLE contracte_artisti(
-    id_contract NUMBER PRIMARY KEY,
+    id_contract NUMBER,
     id_locatie NUMBER NOT NULL,
     procent_casa NUMBER(2,2) NOT NULL,
     avans NUMBER,
     id_tip_contract_artist NUMBER NOT NULL,
     id_artist NUMBER NOT NULL,
+    PRIMARY KEY (id_contract, id_artist),
     FOREIGN KEY (id_contract) REFERENCES contracte(id_contract),
     FOREIGN KEY (id_tip_contract_artist) REFERENCES tipuri_contracte_artisti(id_tip_contract_artist),
     FOREIGN KEY (id_artist) REFERENCES artisti(id_artist)
