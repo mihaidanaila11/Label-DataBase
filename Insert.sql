@@ -449,6 +449,9 @@ VALUES (4, 'Elena', 'Munteanu', 'Lena', TO_DATE('1992-02-10', 'YYYY-MM-DD'), '07
 
 INSERT INTO artisti (id_artist, nume, prenume, nume_scena, data_nastere, telefon, id_gen, id_manager) 
 VALUES (5, 'Vasile', 'Georgescu', 'Vasi', TO_DATE('1994-11-30', 'YYYY-MM-DD'), '0756789012', 5, 13);
+
+INSERT INTO artisti
+VALUES (6, 'Danaila', 'Mihai', 'Imp0rt', TO_DATE('2005-22-01', 'YYYY-MM-DD'), '0771118281', 1, 1);
 --
 
 -- ASOC_LANSARI --
@@ -462,6 +465,11 @@ INSERT INTO asoc_lansari (id_artist, id_lansare) VALUES (4, 3);
 INSERT INTO asoc_lansari (id_artist, id_lansare) VALUES (4, 5);
 INSERT INTO asoc_lansari (id_artist, id_lansare) VALUES (5, 4);
 INSERT INTO asoc_lansari (id_artist, id_lansare) VALUES (5, 5);
+INSERT INTO ASOC_LANSARI (id_artist, id_lansare) VALUES (6, 2);
+INSERT INTO ASOC_LANSARI (id_artist, id_lansare) VALUES (6, 1);
+INSERT INTO ASOC_LANSARI (id_artist, id_lansare) VALUES (6, 3);
+INSERT INTO ASOC_LANSARI (id_artist, id_lansare) VALUES (6, 4);
+INSERT INTO ASOC_LANSARI (id_artist, id_lansare) VALUES (6, 5);
 --
 
 -- MAGAZINE_ONLINE --
