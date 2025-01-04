@@ -433,10 +433,6 @@ END;
 /
 --
 
-SELECT id_angajat, nume_post
-FROM angajati JOIN posturi USING (id_post)
-WHERE nume_post = 'Manager';
-
 
 -- ARTISTI --
 INSERT INTO artisti (id_artist, nume, prenume, nume_scena, data_nastere, telefon, id_gen, id_manager) 
@@ -576,8 +572,6 @@ BEGIN
     CLOSE c_artisti;
 END;
 /
-
-SELECT * FROM contracte_angajati;
 --
 
 -- CONTRACTE ANGAJATI --
