@@ -119,6 +119,40 @@ CREATE TABLE melodii(
 );
 --
 
+
+
+-- FACILITATI --
+CREATE TABLE facilitati(
+    id_facilitate NUMBER PRIMARY KEY,
+    nume_facilitate VARCHAR(20) NOT NULL
+);
+--
+
+-- POST --
+CREATE TABLE posturi(
+    id_post NUMBER PRIMARY KEY,
+    nume_post VARCHAR2(25) NOT NULL,
+    salariu_minim NUMBER,
+    salariu_maxim NUMBER,
+    experienta_minima NUMBER
+);
+--
+
+-- ANGAJATI --
+CREATE TABLE angajati(
+    id_angajat NUMBER PRIMARY KEY,
+    nume VARCHAR2(25) NOT NULL,
+    prenume VARCHAR2(25) NOT NULL,
+    id_post NUMBER NOT NULL,
+    id_departament NUMBER NOT NULL,
+    telefon VARCHAR2(12),
+    email VARCHAR2(35) NOT NULL,
+    data_nastere DATE,
+    salariu NUMBER NOT NULL,
+    FOREIGN KEY (id_post) REFERENCES posturi(id_post)
+);
+--
+
 -- ARTISTI --
 CREATE TABLE artisti(
     id_artist NUMBER PRIMARY KEY,
@@ -160,38 +194,6 @@ CREATE TABLE asoc_depozite(
     PRIMARY KEY (id_magazin_online, id_depozit),
     FOREIGN KEY (id_magazin_online) REFERENCES magazine_online(id_magazin_online),
     FOREIGN KEY (id_depozit) REFERENCES depozite (id_depozit)
-);
---
-
--- FACILITATI --
-CREATE TABLE facilitati(
-    id_facilitate NUMBER PRIMARY KEY,
-    nume_facilitate VARCHAR(20) NOT NULL
-);
---
-
--- POST --
-CREATE TABLE posturi(
-    id_post NUMBER PRIMARY KEY,
-    nume_post VARCHAR2(25) NOT NULL,
-    salariu_minim NUMBER,
-    salariu_maxim NUMBER,
-    experienta_minima NUMBER
-);
---
-
--- ANGAJATI --
-CREATE TABLE angajati(
-    id_angajat NUMBER PRIMARY KEY,
-    nume VARCHAR2(25) NOT NULL,
-    prenume VARCHAR2(25) NOT NULL,
-    id_post NUMBER NOT NULL,
-    id_departament NUMBER NOT NULL,
-    telefon VARCHAR2(12),
-    email VARCHAR2(35) NOT NULL,
-    data_nastere DATE,
-    salariu NUMBER NOT NULL,
-    FOREIGN KEY (id_post) REFERENCES posturi(id_post)
 );
 --
 
