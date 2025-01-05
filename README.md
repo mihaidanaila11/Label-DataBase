@@ -24,7 +24,7 @@
 - [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un subprogram stocat independent de tip procedură care să aibă minim 2 parametri și să utilizeze într-o singură comandă SQL 5 dintre tabelele create. Definiți minim 2 excepții proprii, altele decât cele predefinite la nivel de sistem. Apelați subprogramul astfel încât să evidențiați toate cazurile definite
 și tratate.
 
-- [ ] Definiți un trigger de tip LMD la nivel de comandă. Declanșați trigger-ul.
+- [x] Definiți un trigger de tip LMD la nivel de comandă. Declanșați trigger-ul.
 
 - [x] Definiți un trigger de tip LMD la nivel de linie. Declanșați trigger-ul.
 
