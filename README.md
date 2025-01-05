@@ -26,7 +26,7 @@
 
 - [ ] Definiți un trigger de tip LMD la nivel de comandă. Declanșați trigger-ul.
 
-- [ ] Definiți un trigger de tip LMD la nivel de linie. Declanșați trigger-ul.
+- [x] Definiți un trigger de tip LMD la nivel de linie. Declanșați trigger-ul.
 
 - [ ] Definiți un trigger de tip LDD. Declanșați trigger-ul.
 
