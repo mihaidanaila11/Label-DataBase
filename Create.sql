@@ -96,7 +96,7 @@ CREATE TABLE tipuri_lansari(
 -- LANSARI --
 CREATE TABLE lansari(
     id_lansare NUMBER PRIMARY KEY,
-    nume VARCHAR2(30) NOT NULL,
+    nume VARCHAR2(40) NOT NULL,
     data_lansare DATE DEFAULT sysdate,
     id_tip_lansare NUMBER NOT NULL,
     id_gen NUMBER NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE lansari(
 -- MELODII --
 CREATE TABLE melodii(
     id_melodie NUMBER PRIMARY KEY,
-    nume VARCHAR2(15) NOT NULL,
+    nume VARCHAR2(40) NOT NULL,
     redari NUMBER DEFAULT 0,
     id_lansare NUMBER NOT NULL,
     id_gen NUMBER NOT NULL,
