@@ -9,6 +9,7 @@ CREATE TABLE judete(
 CREATE TABLE orase(
     id_oras NUMBER PRIMARY KEY,
     nume VARCHAR2(30),
+    populatie NUMBER,
     id_judet NUMBER,
     FOREIGN KEY (id_judet) REFERENCES judete(id_judet)
 );

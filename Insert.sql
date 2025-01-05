@@ -7,11 +7,11 @@ INSERT INTO judete (id_judet, nume) VALUES (5, 'Constanța');
 --
 
 -- ORASE --
-INSERT INTO orase (id_oras, nume, id_judet) VALUES (1, 'Sector 1', 1);
-INSERT INTO orase (id_oras, nume, id_judet) VALUES (2, 'Cluj-Napoca', 2);
-INSERT INTO orase (id_oras, nume, id_judet) VALUES (3, 'Timișoara', 3);
-INSERT INTO orase (id_oras, nume, id_judet) VALUES (4, 'Iași', 4);
-INSERT INTO orase (id_oras, nume, id_judet) VALUES (5, 'Constanța', 5);
+INSERT INTO orase (id_oras, nume, populatie, id_judet) VALUES (1, 'Sector 1', 224764, 1);
+INSERT INTO orase (id_oras, nume, populatie, id_judet) VALUES (2, 'Cluj-Napoca', 286598, 2);
+INSERT INTO orase (id_oras, nume, populatie, id_judet) VALUES (3, 'Timișoara', 250849, 3);
+INSERT INTO orase (id_oras, nume, populatie, id_judet) VALUES (4, 'Iași', 271692, 4);
+INSERT INTO orase (id_oras, nume, populatie, id_judet) VALUES (5, 'Constanța', 263688, 5);
 --
 
 -- LOCATII --
@@ -661,8 +661,16 @@ VALUES (129, 5, 0.40, 20000, 5, 5);
 --
 
 -- Aditionale
+
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (7, 'Future', 3, 'Nayvadius', 'Wilburn', TO_DATE('1983-11-20', 'YYYY-MM-DD'), '1234567890', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (130, TO_DATE('2000-01-01', 'YYYY-MM-DD'));
+
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (130, 1, 0.22, 40000, 1, 7);
 
 INSERT INTO coperte
 VALUES (6, 1000, 1000, 'PNG');
@@ -677,6 +685,12 @@ VALUES (6, 'Stick to the Models', 104654, 6, 3);
 
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (8, 'Drake', 3, 'Aubrey', 'Graham', TO_DATE('1986-10-24', 'YYYY-MM-DD'), '9876543210', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (131, TO_DATE('2000-02-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (131, 1, 0.22, 20000, 1, 8);
 
 INSERT INTO coperte
 VALUES (7, 1000, 1000, 'PNG');
@@ -773,6 +787,12 @@ VALUES (18, 'Hard To Choose One', 467024, 13, 3);
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (9, '21 Savage', 3, 'Shéyaa', 'Bin Abraham-Joseph', TO_DATE('1992-10-22', 'YYYY-MM-DD'), '1122334455', 1);
 
+INSERT INTO contracte (id_contract, data_start)
+VALUES (132, TO_DATE('2000-03-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (132, 3, 0.2, 80000, 1, 9);
+
 INSERT INTO coperte
 VALUES (14, 1000, 1000, 'PNG');
 
@@ -799,8 +819,20 @@ VALUES (20, 'Hater Shit', 360854, 15, 3);
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (15, 'Young Thug', 3, 'Jeffery', 'Williams', TO_DATE('1991-08-16', 'YYYY-MM-DD'), '9988776655', 1);
 
+INSERT INTO contracte (id_contract, data_start)
+VALUES (133, TO_DATE('2000-04-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (133, 5, 0.4, 100000, 1, 15);
+
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (16, 'Gunna', 3, 'Sergio', 'Kitchens', TO_DATE('1993-06-14', 'YYYY-MM-DD'), '2233445566', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (134, TO_DATE('2000-05-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (134, 2, 0.2, 60000, 1, 16);
 
 INSERT INTO asoc_lansari VALUES (15, 6);
 INSERT INTO asoc_lansari VALUES (16, 6);
@@ -828,6 +860,12 @@ VALUES (24, 'Thought It Was a Drought', 315535, 9, 3);
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (10, 'Uncle Murda', 3, 'Leonard', 'Grant', TO_DATE('1980-07-25', 'YYYY-MM-DD'), '6677889900', 1);
 
+INSERT INTO contracte (id_contract, data_start)
+VALUES (135, TO_DATE('2000-06-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (135, 1, 0.5, 20000, 1, 10);
+
 INSERT INTO coperte
 VALUES (17, 1000, 1000, 'PNG');
 
@@ -841,6 +879,12 @@ VALUES (25, 'Right Now', 429337, 17, 3);
 
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (11, 'Lil Double 0', 3, 'Tyler', 'Jones', TO_DATE('1999-02-10', 'YYYY-MM-DD'), '4455667788', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (136, TO_DATE('2000-07-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (136, 2, 0.2, 1000, 1, 11);
 
 INSERT INTO coperte
 VALUES (18, 1000, 1000, 'PNG');
@@ -870,6 +914,12 @@ VALUES (28, 'Three', 107998, 19, 3);
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (12, 'Young Scooter', 3, 'Kenneth', 'Edward Bailey', TO_DATE('1986-03-28', 'YYYY-MM-DD'), '5566778899', 1);
 
+INSERT INTO contracte (id_contract, data_start)
+VALUES (137, TO_DATE('2000-08-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (137, 3, 0.25, 40000, 1, 12);
+
 INSERT INTO coperte
 VALUES (20, 1000, 1000, 'PNG');
 
@@ -883,6 +933,12 @@ VALUES (29, 'Hard To Handle', 450414, 20, 3);
 
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (13, 'Meek Mill', 3, 'Robert', 'Williams', TO_DATE('1987-05-06', 'YYYY-MM-DD'), '3344556677', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (138, TO_DATE('2000-09-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (138, 1, 0.11, 23000, 1, 13);
 
 INSERT INTO coperte
 VALUES (21, 1000, 1000, 'PNG');
@@ -914,6 +970,12 @@ VALUES (33, 'Crazy Clientele', 381327, 22, 3);
 
 INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere, telefon, id_manager)
 VALUES (14, 'Metro Boomin', 3, 'Leland', 'Wayne', TO_DATE('1993-09-16', 'YYYY-MM-DD'), '7788990011', 1);
+
+INSERT INTO contracte (id_contract, data_start)
+VALUES (139, TO_DATE('2000-10-01', 'YYYY-MM-DD'));
+
+INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
+VALUES (139, 5, 0.28, 230000, 1, 14);
 
 INSERT INTO coperte
 VALUES (23, 1000, 1000, 'PNG');
@@ -952,6 +1014,7 @@ INSERT INTO melodii
 VALUES (37, 'MJ', 314433, 25, 3);
 
 
+/*
 DECLARE
     v_dataLansare   lansari.data_lansare%TYPE;
 
@@ -974,7 +1037,7 @@ BEGIN
         WHERE id_lansare = lansare.id_lansare;
     END LOOP;
 END;
-/
+/*/
 
 INSERT INTO melodii
 VALUES (38, 'KKK', 474535, 8, 3);
