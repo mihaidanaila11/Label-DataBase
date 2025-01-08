@@ -11,6 +11,8 @@ NESTED TABLE nume_tabele STORE AS cr_del_log_store;
 INSERT INTO cr_del_log
 VALUES (SYSTIMESTAMP(3), USER, cr_del_log_imb('cr_del_log'));
 
+-- Am impartit triggerul in doua pentru a fi mai usor de urmarit
+
 CREATE OR REPLACE TRIGGER trig_ex12Create
 AFTER CREATE
 ON SCHEMA
@@ -112,3 +114,4 @@ EXECUTE PRINT_TABLEREGS;
 
 DROP TABLE Table2;
 EXECUTE PRINT_TABLEREGS;
+
