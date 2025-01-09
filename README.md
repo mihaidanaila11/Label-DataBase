@@ -1,7 +1,7 @@
 # Music Label DataBase - Proiect SGBD
 
 ## Cerințe obligatorii pentru a lua în considerare proiectul:
-- [ ] Prezentați pe scurt baza de date (utilitatea ei).
+- [x] Prezentați pe scurt baza de date (utilitatea ei).
 
 - [x] Realizați diagrama entitate-relație (ERD): entitățile, relațiile și atributele trebuie definite în limba română (vezi curs SGBD, model de diagrama entitate-relație; nu se va accepta alt format).
 
