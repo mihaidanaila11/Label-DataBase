@@ -1,3 +1,6 @@
+-- Definiți un trigger de tip LDD care să insereze într-un tabel
+-- informații despre operatie și tabelele actuale din baza de date (din contextul proiectului).
+
 CREATE TYPE cr_del_log_imb IS TABLE OF VARCHAR2(30);
 /
 

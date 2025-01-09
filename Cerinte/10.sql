@@ -1,7 +1,7 @@
 -- Creati un tabel melodii_log in care sa se pastreze
 -- informatii despre fiecare operatie LMD efectuata
 -- pe tabelul melodii plus evolutia redarilor totale.
--- Actualizarea tabelului sa fie facuta printr-un tr
+-- Actualizarea tabelului sa fie facuta printr-un trigger
 
 CREATE TABLE melodii_log(
     data_operatie   DATE,

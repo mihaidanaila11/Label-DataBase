@@ -51,8 +51,6 @@ BEGIN
         ) s
     WHERE s.incasari_luna = v_incasareMaxima;
 
-    DBMS_OUTPUT.PUT_LINE('Luna cu cele mai mari incasari este ' || v_luna);
-
     RETURN v_luna;
 
 EXCEPTION
@@ -75,7 +73,18 @@ DECLARE
     v_luna VARCHAR2(3);
 BEGIN
     v_luna := FUNC_EX8('SPOTIFY', 0);
+    IF v_luna IS NOT NULL THEN
+        DBMS_OUTPUT.PUT_LINE('Luna cu cele mai mari incasari este ' || v_luna);
+    END IF;
+
     v_luna := FUNC_EX8('SPOTIFY', 2);
+    IF v_luna IS NOT NULL THEN
+        DBMS_OUTPUT.PUT_LINE('Luna cu cele mai mari incasari este ' || v_luna);
+    END IF;
+
     v_luna := FUNC_EX8('SPOTIFY', 3);
+    IF v_luna IS NOT NULL THEN
+        DBMS_OUTPUT.PUT_LINE('Luna cu cele mai mari incasari este ' || v_luna);
+    END IF;
 END;
 /

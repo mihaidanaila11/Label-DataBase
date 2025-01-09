@@ -3,7 +3,9 @@
 -- minim de redari.
 -- Numarul minim de redari va fi citit de la tastatura
 
-CREATE OR REPLACE PROCEDURE proc_ex7 AS
+CREATE OR REPLACE PROCEDURE proc_ex7 (
+    arg_min_redari      melodii.REDARI%TYPE
+) AS
     TYPE    refcursor   IS REF CURSOR;
     
     CURSOR c_artisti(min_redari NUMBER) IS
@@ -30,9 +32,8 @@ CREATE OR REPLACE PROCEDURE proc_ex7 AS
     v_numeProducator    producatori.NUME_PRODUCATOR%TYPE;
     v_idArtist          artisti.ID_ARTIST%TYPE;
 
-    v_minRedari melodii.REDARI%TYPE := &p_minRedari;
 BEGIN
-    OPEN c_artisti(v_minRedari);
+    OPEN c_artisti(arg_min_redari);
 
     LOOP
         FETCH c_artisti INTO v_idArtist, v_cursor;
@@ -53,13 +54,14 @@ BEGIN
         
         IF v_cursor%ROWCOUNT = 0 THEN
             DBMS_OUTPUT.PUT_LINE('Nu colaboreaza cu niciun producator de produse');
-        ELSE 
-            DBMS_OUTPUT.PUT_LINE('');
         END IF;
+        
+        DBMS_OUTPUT.PUT_LINE('');
+        
     END LOOP;
 
     CLOSE c_artisti;
 END;
 /
 
-EXECUTE proc_ex7;
+EXECUTE proc_ex7(&p_minredari);

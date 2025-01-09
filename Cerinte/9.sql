@@ -11,9 +11,9 @@
 -- mentionat in contractul incheiat de artist.
 
 -- Stim ca un om asculta o melodie in medie de 5 ori
--- Din toate persoanele care au ascultat albumul
+
 -- Echipa de marketing a venit cu o strategie
--- de a pune nrPersoaneCareAuAscultat / nrPopulatieJudet afise
+-- de a pune nrPersoaneCareAuAscultat / nrPopulatieJudet * 50 afise
 
 -- Pretul unui afis se calculeaza in functie de
 -- marimea copertei si de formatul acesteia.
@@ -71,6 +71,7 @@ IS
 
     AN_NEPROFITABIL     EXCEPTION;
     DEFICIT_BUGET       EXCEPTION;
+    FARA_LANSARI        EXCEPTION;
 BEGIN
     SELECT lansari.nume, lansari.id_coperta, SUM(redari/5), SUM(redari) * v_plataPlatforma BULK COLLECT INTO v_lansariAlbume
     FROM lansari JOIN asoc_lansari USING (id_lansare)
@@ -79,6 +80,9 @@ BEGIN
     AND id_artist = arg_idArtist
     AND id_tip_lansare = 1
     GROUP BY lansari.nume, lansari.id_coperta;
+
+    IF v_lansariAlbume.COUNT = 0 THEN RAISE FARA_LANSARI;
+    END IF;
 
     SELECT SUM(populatie) INTO v_populatieJudet
     FROM artisti JOIN contracte_artisti USING(id_artist)
@@ -128,6 +132,12 @@ EXCEPTION
         VALUES (arg_an, arg_idArtist, SYSDATE, 'DEIFCIT_BUGET');
 
         DBMS_OUTPUT.PUT_LINE('Anul ' || arg_an || ' creste deficitul bugetar al casei de discuri.');
+
+    WHEN FARA_LANSARI THEN
+        INSERT INTO EXCEPTII_AFISE
+        VALUES (arg_an, arg_idArtist, SYSDATE, 'FARA_LANSARI');
+
+        DBMS_OUTPUT.PUT_LINE('Artistul nu are albume in anul ' || arg_an);
 END;
 /
 

@@ -1,3 +1,10 @@
+-- Casa de discuri vrea sa ofere artiștilor câteva 
+-- statistici cu privire la activitatea lor în cadrul casei.
+-- Dezvoltați un pachet care să ofere statistici cu privire la veniturile
+-- generate de artiști pe gen, cele mai bune decenii ale artiștilor
+-- din punct de vedere al ascultărilor, categorii de vechime ai artiștilor 
+-- și evoluția artiștilor din punct de vedere al încasărilor.
+
 CREATE OR REPLACE PACKAGE label_stats
 IS
     tarif_redare CONSTANT NUMBER := 0.00318;
