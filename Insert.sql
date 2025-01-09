@@ -291,79 +291,79 @@ VALUES (10, 'Design', NULL, 5);
 
 -- ANGAJATI --
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (1, 'Popescu', 'Andrei', 1, 1, '0745123456', 'andrei.popescu@example.com', TO_DATE('1985-03-15', 'YYYY-MM-DD'), 5000);
+VALUES (1, 'Popescu', 'Andrei', 1, 1, '0745123456', 'andrei.popescu@yahoo.com', TO_DATE('1985-03-15', 'YYYY-MM-DD'), 5000);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (2, 'Ionescu', 'Maria', 2, 2, '0745234567', 'maria.ionescu@example.com', TO_DATE('1990-07-20', 'YYYY-MM-DD'), 4500);
+VALUES (2, 'Ionescu', 'Maria', 2, 2, '0745234567', 'maria.ionescu@yahoo.com', TO_DATE('1990-07-20', 'YYYY-MM-DD'), 4500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (3, 'Vasile', 'Ion', 3, 3, '0745345678', 'ion.vasile@example.com', TO_DATE('1983-02-10', 'YYYY-MM-DD'), 5200);
+VALUES (3, 'Vasile', 'Ion', 3, 3, '0745345678', 'ion.vasile@yahoo.com', TO_DATE('1983-02-10', 'YYYY-MM-DD'), 5200);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (4, 'Radu', 'Diana', 4, 4, '0745456789', 'diana.radu@example.com', TO_DATE('1992-11-05', 'YYYY-MM-DD'), 3800);
+VALUES (4, 'Radu', 'Diana', 4, 4, '0745456789', 'diana.radu@yahoo.com', TO_DATE('1992-11-05', 'YYYY-MM-DD'), 3800);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (5, 'Neagu', 'Alexandru', 5, 5, '0745567890', 'alexandru.neagu@example.com', TO_DATE('1988-04-30', 'YYYY-MM-DD'), 4800);
+VALUES (5, 'Neagu', 'Alexandru', 5, 5, '0745567890', 'alexandru.neagu@yahoo.com', TO_DATE('1988-04-30', 'YYYY-MM-DD'), 4800);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (6, 'Georgescu', 'Ionut', 6, 6, '0745678901', 'ionut.georgescu@example.com', TO_DATE('1994-09-25', 'YYYY-MM-DD'), 3500);
+VALUES (6, 'Georgescu', 'Ionut', 6, 6, '0745678901', 'ionut.georgescu@yahoo.com', TO_DATE('1994-09-25', 'YYYY-MM-DD'), 3500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (7, 'Popa', 'Elena', 7, 7, '0745789012', 'elena.popa@example.com', TO_DATE('1991-01-12', 'YYYY-MM-DD'), 4000);
+VALUES (7, 'Popa', 'Elena', 7, 7, '0745789012', 'elena.popa@yahoo.com', TO_DATE('1991-01-12', 'YYYY-MM-DD'), 4000);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (8, 'Mihail', 'Gabriela', 8, 8, '0745890123', 'gabriela.mihail@example.com', TO_DATE('1986-06-22', 'YYYY-MM-DD'), 4700);
+VALUES (8, 'Mihail', 'Gabriela', 8, 8, '0745890123', 'gabriela.mihail@yahoo.com', TO_DATE('1986-06-22', 'YYYY-MM-DD'), 4700);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (9, 'Bălan', 'Victor', 9, 9, '0745901234', 'victor.balan@example.com', TO_DATE('1984-08-17', 'YYYY-MM-DD'), 3500);
+VALUES (9, 'Bălan', 'Victor', 9, 9, '0745901234', 'victor.balan@yahoo.com', TO_DATE('1984-08-17', 'YYYY-MM-DD'), 3500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (10, 'Marin', 'Ioana', 10, 10, '0746012345', 'ioana.marin@example.com', TO_DATE('1995-05-03', 'YYYY-MM-DD'), 4300);
+VALUES (10, 'Marin', 'Ioana', 10, 10, '0746012345', 'ioana.marin@yahoo.com', TO_DATE('1995-05-03', 'YYYY-MM-DD'), 4300);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (11, 'Dumitru', 'Stefan', 1, 6, '0746123456', 'stefan.dumitru@example.com', TO_DATE('1980-12-18', 'YYYY-MM-DD'), 8000);
+VALUES (11, 'Dumitru', 'Stefan', 1, 6, '0746123456', 'stefan.dumitru@yahoo.com', TO_DATE('1980-12-18', 'YYYY-MM-DD'), 8000);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (12, 'Petrescu', 'Cristina', 1, 6, '0746234567', 'cristina.petrescu@example.com', TO_DATE('1993-03-25', 'YYYY-MM-DD'), 7500);
+VALUES (12, 'Petrescu', 'Cristina', 1, 6, '0746234567', 'cristina.petrescu@yahoo.com', TO_DATE('1993-03-25', 'YYYY-MM-DD'), 7500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (13, 'Barbu', 'Andreea', 1, 6, '0746345678', 'andreea.barbu@example.com', TO_DATE('1987-09-06', 'YYYY-MM-DD'), 7800);
+VALUES (13, 'Barbu', 'Andreea', 1, 6, '0746345678', 'andreea.barbu@yahoo.com', TO_DATE('1987-09-06', 'YYYY-MM-DD'), 7800);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (14, 'Munteanu', 'Florin', 2, 6, '0746456789', 'florin.munteanu@example.com', TO_DATE('1982-05-14', 'YYYY-MM-DD'), 7000);
+VALUES (14, 'Munteanu', 'Florin', 2, 6, '0746456789', 'florin.munteanu@yahoo.com', TO_DATE('1982-05-14', 'YYYY-MM-DD'), 7000);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (15, 'Ion', 'Adrian', 2, 6, '0746567890', 'adrian.ion@example.com', TO_DATE('1989-11-21', 'YYYY-MM-DD'), 7200);
+VALUES (15, 'Ion', 'Adrian', 2, 6, '0746567890', 'adrian.ion@yahoo.com', TO_DATE('1989-11-21', 'YYYY-MM-DD'), 7200);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (16, 'Stan', 'Ramona', 3, 1, '0746678901', 'ramona.stan@example.com', TO_DATE('1990-10-12', 'YYYY-MM-DD'), 3800);
+VALUES (16, 'Stan', 'Ramona', 3, 1, '0746678901', 'ramona.stan@yahoo.com', TO_DATE('1990-10-12', 'YYYY-MM-DD'), 3800);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (17, 'Neagu', 'Alina', 4, 2, '0746789012', 'alina.neagu@example.com', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 4200);
+VALUES (17, 'Neagu', 'Alina', 4, 2, '0746789012', 'alina.neagu@yahoo.com', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 4200);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (18, 'Cristescu', 'Mihai', 5, 3, '0746890123', 'mihai.cristescu@example.com', TO_DATE('1983-01-03', 'YYYY-MM-DD'), 4500);
+VALUES (18, 'Cristescu', 'Mihai', 5, 3, '0746890123', 'mihai.cristescu@yahoo.com', TO_DATE('1983-01-03', 'YYYY-MM-DD'), 4500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (19, 'Sava', 'Larisa', 6, 4, '0746901234', 'larisa.sava@example.com', TO_DATE('1994-02-19', 'YYYY-MM-DD'), 3300);
+VALUES (19, 'Sava', 'Larisa', 6, 4, '0746901234', 'larisa.sava@yahoo.com', TO_DATE('1994-02-19', 'YYYY-MM-DD'), 3300);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (20, 'Vlaicu', 'Doru', 7, 5, '0747012345', 'doru.vlaicu@example.com', TO_DATE('1990-12-05', 'YYYY-MM-DD'), 4600);
+VALUES (20, 'Vlaicu', 'Doru', 7, 5, '0747012345', 'doru.vlaicu@yahoo.com', TO_DATE('1990-12-05', 'YYYY-MM-DD'), 4600);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (21, 'Dima', 'Stefan', 3, 1, '0747123456', 'stefan.dima@example.com', TO_DATE('1984-08-23', 'YYYY-MM-DD'), 5900);
+VALUES (21, 'Dima', 'Stefan', 3, 1, '0747123456', 'stefan.dima@yahoo.com', TO_DATE('1984-08-23', 'YYYY-MM-DD'), 5900);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (22, 'Pavel', 'Florin', 4, 2, '0747234567', 'florin.pavel@example.com', TO_DATE('1986-11-10', 'YYYY-MM-DD'), 5200);
+VALUES (22, 'Pavel', 'Florin', 4, 2, '0747234567', 'florin.pavel@yahoo.com', TO_DATE('1986-11-10', 'YYYY-MM-DD'), 5200);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (23, 'Tudor', 'Elena', 5, 3, '0747345678', 'elena.tudor@example.com', TO_DATE('1987-07-15', 'YYYY-MM-DD'), 5500);
+VALUES (23, 'Tudor', 'Elena', 5, 3, '0747345678', 'elena.tudor@yahoo.com', TO_DATE('1987-07-15', 'YYYY-MM-DD'), 5500);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (24, 'Bălan', 'Radu', 8, 4, '0747456789', 'radu.balan@example.com', TO_DATE('1985-02-25', 'YYYY-MM-DD'), 5000);
+VALUES (24, 'Bălan', 'Radu', 8, 4, '0747456789', 'radu.balan@yahoo.com', TO_DATE('1985-02-25', 'YYYY-MM-DD'), 5000);
 
 INSERT INTO angajati (id_angajat, nume, prenume, id_post, id_departament, telefon, email, data_nastere, salariu) 
-VALUES (25, 'Popa', 'Mihail', 9, 5, '0747567890', 'mihail.popa@example.com', TO_DATE('1991-09-19', 'YYYY-MM-DD'), 5200);
+VALUES (25, 'Popa', 'Mihail', 9, 5, '0747567890', 'mihail.popa@yahoo.com', TO_DATE('1991-09-19', 'YYYY-MM-DD'), 5200);
 
 --
 
@@ -451,7 +451,7 @@ INSERT INTO artisti (id_artist, nume, prenume, nume_scena, data_nastere, telefon
 VALUES (5, 'Vasile', 'Georgescu', 'Vasi', TO_DATE('1994-11-30', 'YYYY-MM-DD'), '0756789012', 5, 13);
 
 INSERT INTO artisti
-VALUES (6, 'Danaila', 'Mihai', 'Imp0rt', TO_DATE('2005-22-01', 'YYYY-MM-DD'), '0771118281', 1, 1);
+VALUES (6, 'Danaila', 'Mihai', 'Imp0rt', TO_DATE('2005-01-22', 'YYYY-MM-DD'), '0771118281', 1, 1);
 --
 
 -- ASOC_LANSARI --
@@ -666,11 +666,11 @@ INSERT INTO artisti (id_artist, nume_scena, id_gen, nume, prenume, data_nastere,
 VALUES (7, 'Future', 3, 'Nayvadius', 'Wilburn', TO_DATE('1983-11-20', 'YYYY-MM-DD'), '1234567890', 1);
 
 INSERT INTO contracte (id_contract, data_start)
-VALUES (130, TO_DATE('2000-01-01', 'YYYY-MM-DD'));
+VALUES (140, TO_DATE('2000-01-01', 'YYYY-MM-DD'));
 
 
 INSERT INTO contracte_artisti (id_contract, id_locatie, procent_casa, avans, id_tip_contract_artist, id_artist) 
-VALUES (130, 1, 0.22, 40000, 1, 7);
+VALUES (140, 1, 0.22, 40000, 1, 7);
 
 INSERT INTO coperte
 VALUES (6, 1000, 1000, 'PNG');
@@ -1013,8 +1013,6 @@ INSERT INTO asoc_lansari VALUES (7, 25);
 INSERT INTO melodii
 VALUES (37, 'MJ', 314433, 25, 3);
 
-
-/*
 DECLARE
     v_dataLansare   lansari.data_lansare%TYPE;
 
@@ -1037,7 +1035,9 @@ BEGIN
         WHERE id_lansare = lansare.id_lansare;
     END LOOP;
 END;
-/*/
+/
 
 INSERT INTO melodii
 VALUES (38, 'KKK', 474535, 8, 3);
+
+COMMIT;
