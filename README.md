@@ -2,7 +2,7 @@
 
 This project demonstrates my ability to develop a comprehensive database solution from scratch, tailored for a fictional music label. The project involved projecting ER and Conceptual Diagrams, implementing entities, and finding optimal solutions for various fictional problems and requirements. 
 
-Full documentation [Here](https://docs.google.com/document/d/1D-7TA7T_IqPdlu0YeSM05ezheARcDrhJ31lK8kLzG6g/edit?usp=sharing).
+Full documentation <a href="https://docs.google.com/document/d/1D-7TA7T_IqPdlu0YeSM05ezheARcDrhJ31lK8kLzG6g/edit?usp=sharing" target="_blank">Here</a>.
 
 ## Requirements for this project to be graded in my SGBD class
 - [x] Briefly present the database (its utility).
