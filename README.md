@@ -1,34 +1,35 @@
-# Music Label DataBase - Proiect SGBD
+# Music Label DataBase
 
-## Cerințe obligatorii pentru a lua în considerare proiectul:
-- [x] Prezentați pe scurt baza de date (utilitatea ei).
+This project demonstrates my ability to develop a comprehensive database solution from scratch, tailored for a fictional music label. The project involved projecting ER and Conceptual Diagrams, implementing entities, and finding optimal solutions for various fictional problems and requirements. 
 
-- [x] Realizați diagrama entitate-relație (ERD): entitățile, relațiile și atributele trebuie definite în limba română (vezi curs SGBD, model de diagrama entitate-relație; nu se va accepta alt format).
+## Requirements for this project to be graded in my SGBD class
+- [x] Briefly present the database (its utility).
 
-![Diagrama Entitate Relatie](Diagrams/Diagrama%20ER.jpg)
+- [x] Create the entity-relationship diagram (ERD): entities, relationships, and attributes must be defined in Romanian (see the DBMS course, entity-relationship diagram model; no other format will be accepted).
 
-- [x] Pornind de la diagrama entitate-relație realizați diagrama conceptuală a modelului propus, integrând toate atributele necesare: entitățile, relațiile și atributele trebuie definite în limba română.
+![Entity Relationship Diagram](Diagrams/Diagrama%20ER.jpg)
 
-![Diagrama Conceptuala](Diagrams/Diagrama%20Conceptuala.jpg)
+- [x] Based on the entity-relationship diagram, create the conceptual diagram of the proposed model, integrating all necessary attributes: entities, relationships, and attributes must be defined in Romanian.
 
-- [x] Implementați în Oracle diagrama conceptuală realizată: definiți toate tabelele, adăugând toate constrângerile de integritate necesare (chei primare, cheile externe etc).
+![Conceptual Diagram](Diagrams/Diagrama%20Conceptuala.jpg)
 
-- [x] Adăugați informații coerente în tabelele create (minim 5 înregistrări pentru fiecare entitate independentă; minim 10 înregistrări pentru fiecare tabelă asociativă).
+- [x] Implement the conceptual diagram in Oracle: define all tables, adding all necessary integrity constraints (primary keys, foreign keys, etc.).
 
-- [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un subprogram stocat independent care să utilizeze toate cele 3 tipuri de colecții studiate. Apelați subprogramul.
+- [x] Add coherent information to the created tables (at least 5 records for each independent entity; at least 10 records for each associative table).
 
-- [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un subprogram stocat independent care să utilizeze 2 tipuri diferite de cursoare studiate, unul dintre acestea fiind cursor parametrizat, dependent de celălalt cursor. Apelați subprogramul.
+- [x] Formulate a problem in natural language to solve using an independently stored subprogram that uses all 3 types of collections studied. Call the subprogram.
 
-- [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un subprogram stocat independent de tip funcție care să utilizeze într-o singură comandă SQL 3 dintre tabelele create. Tratați toate excepțiile care pot apărea, incluzând excepțiile predefinite NO_DATA_FOUND și TOO_MANY_ROWS. Apelați subprogramul astfel încât să evidențiați toate cazurile tratate.
+- [x] Formulate a problem in natural language to solve using an independently stored subprogram that uses 2 different types of cursors studied, one of which is a parameterized cursor dependent on the other cursor. Call the subprogram.
 
-- [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un subprogram stocat independent de tip procedură care să aibă minim 2 parametri și să utilizeze într-o singură comandă SQL 5 dintre tabelele create. Definiți minim 2 excepții proprii, altele decât cele predefinite la nivel de sistem. Apelați subprogramul astfel încât să evidențiați toate cazurile definite
-și tratate.
+- [x] Formulate a problem in natural language to solve using an independent stored function that uses 3 of the created tables in a single SQL command. Handle all possible exceptions, including predefined exceptions NO_DATA_FOUND and TOO_MANY_ROWS. Call the subprogram to highlight all treated cases.
 
-- [x] Definiți un trigger de tip LMD la nivel de comandă. Declanșați trigger-ul.
+- [x] Formulate a problem in natural language to solve using an independent stored procedure with at least 2 parameters and that uses 5 of the created tables in a single SQL command. Define at least 2 custom exceptions, other than the predefined system-level exceptions. Call the subprogram to highlight all defined and treated cases.
 
-- [x] Definiți un trigger de tip LMD la nivel de linie. Declanșați trigger-ul.
+- [x] Define a command-level DML trigger. Fire the trigger.
 
-- [x] Definiți un trigger de tip LDD. Declanșați trigger-ul.
+- [x] Define a row-level DML trigger. Fire the trigger.
 
-## Cerințe opționale pentru nota finală N >= 6:
-- [x] Formulați în limbaj natural o problemă pe care să o rezolvați folosind un pachet care să includă tipuri de date complexe și obiecte necesare unui flux de acțiuni integrate, specifice bazei de date definite (minim 2 tipuri de date, minim 2 funcții, minim 2 proceduri).
+- [x] Define a DDL trigger. Fire the trigger.
+
+## Optional Requirements for the Final Grade N >= 6:
+- [x] Formulate a problem in natural language to solve using a package that includes complex data types and objects necessary for an integrated action flow specific to the defined database (at least 2 data types, at least 2 functions, at least 2 procedures).
